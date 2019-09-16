@@ -1,0 +1,35 @@
+<!DOCTYPE HTML>
+<html lang="en" xmlns:th="http://www.thymeleaf.org">
+<head>
+<meta charset="utf-8">
+<meta name="viewport"
+	content="width=device-width, initial-scale=1, shrink-to-fit=no">
+
+<title>Pagina città non trovata</title>
+
+<link rel="stylesheet"
+	th:href="@{webjars/bootstrap/4.2.1/css/bootstrap.min.css}" />
+<link rel="stylesheet" th:href="@{/css/main.css}" />
+
+</head>
+
+<body>
+
+	<nav class="navbar navbar-expand-md navbar-dark bg-dark fixed-top">
+		<a class="navbar-brand" href="#">Pete.com</a>
+	</nav>
+
+	<main role="main" class="container">
+
+	<h2>Questa città non esiste per dio. Cercane un' altra! </h2>
+	
+		<form th:action="@{/}"  >
+		<input class="btn btn-primary" type="submit" value="Torna alla home" />
+
+	</main>
+	<!-- /.container -->
+
+	<script type="text/javascript"
+		th:src="@{webjars/bootstrap/4.2.1/js/bootstrap.min.js}"></script>
+</body>
+</html>

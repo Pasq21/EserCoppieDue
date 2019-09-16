@@ -1,0 +1,52 @@
+<!DOCTYPE HTML>
+<html lang="en" xmlns:th="http://www.thymeleaf.org">
+<head>
+<meta charset="utf-8">
+<meta name="viewport"
+	content="width=device-width, initial-scale=1, shrink-to-fit=no">
+
+<title>Prima Pagina</title>
+
+<link rel="stylesheet"
+	th:href="@{webjars/bootstrap/4.2.1/css/bootstrap.min.css}" />
+<link rel="stylesheet" th:href="@{/css/main.css}" />
+
+</head>
+
+<body>
+
+	<nav class="navbar navbar-expand-md navbar-dark bg-dark fixed-top">
+		<a class="navbar-brand" href="#">Pete.com</a>
+	</nav>
+
+	<main role="main" class="container">
+
+	<div class="starter-template">
+		<h2>Modifica il campo che preferisci: </h2>
+		<form th:action="@{/terzapagina}" method="post" >
+			
+			
+			
+			
+			<input type=text name="citta" th:value="${citta}">
+			<input type=text name="district" th:value="${district}" >
+			<input type=text name="population" th:value="${population}">
+			<input type=hidden name="cittavecchia" th:value="${cittavecchia}">
+			<select th:value="*{codice}" th:name="codice">  
+			<option th:each="codice: ${listacodici}"  th:value="${codice}" th:text="${codice}"> </option>
+			</select>
+			
+			
+			 <input class="btn btn-primary" type="submit" value="Modifica" />
+	</form>
+	</div>
+	
+
+
+	</main>
+	<!-- /.container -->
+
+	<script type="text/javascript"
+		th:src="@{webjars/bootstrap/4.2.1/js/bootstrap.min.js}"></script>
+</body>
+</html>
